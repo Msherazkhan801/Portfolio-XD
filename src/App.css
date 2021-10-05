@@ -1,38 +1,1131 @@
 .App {
+  text-align: left;
+  background: #0E0C38;
+}
+*{
+  color: white;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Poppins Light;
+}
+h1{
+  font-size:150px; margin-left:-6px; font-family: Poppins;
+}
+h2{
+  font-size:41px;
+}
+h3{
+  font-size:30px;
+}
+h4{
+  font-size:26px;
+}
+h5
+{
+  font-size:22px;
+}
+.btn
+{
+  font-family:Raleway;
+}
+.btn-secondary
+{
+  cursor: pointer;
+  display:inline-block;
+  font-size:30px;
+  padding: 30px 80px;
+  border-radius: 80px;
+  background:#FF0513;
+  border: 1px solid #FF0513;
+  transition:0.5s ease all;
+}
+.btn-secondary:hover
+{
+background:transparent;
+cursor: pointer;
+border: 1px solid #fff;
+transition:0.5s ease all;
+}
+
+.btn-primary
+{
+  display:inline-block;
+  cursor: pointer;
+  border: 1px solid #fff;
+  font-size:30px;
+  padding: 30px 80px;
+  border-radius: 80px;
+  transition:0.5s ease all;
+}
+
+.btn-primary:hover
+{
+  cursor: pointer;
+  background:#FF0513;
+  border: 1px solid #FF0513;
+  transition:0.5s ease all;
+}
+ul
+{
+  list-style:none;
+}
+a
+{ 
+  text-decoration: none;
+  outline: none;
+}
+.container
+{
+  max-width:1749px;
+  margin: 0 auto;
+  padding:0 15px;
+}
+
+/* HEADER CSS */
+.nav-wrap
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrap
+{
+  font-size:22px;
+}
+
+.header-nav a
+{
+  padding: 0 21px;
+  position:relative;
+  z-index: 0;
+}
+.header-nav a:not(#get-started)::after
+{
+  content: '';
+  background: red;
+  position: absolute;
+  bottom: -25px;
+  right: 3px;
+  z-index: -1;
+  left: 3px;
+  height:200px;
+  top: -500px;
+  transition: 0.5s all ease;
+}
+
+.header-nav a:not(#get-started)::before
+{
+  content: '';
+  background: #FF0513;
+  position: absolute;
+  bottom: -30px;
+  height: 1px;
+  z-index: -1;
+  transition: 0.5s all ease;
+  right: 50%;
+  left: 50%;
+}
+
+
+.header-nav a:hover:not(#get-started)::after
+{
+  content: '';
+  top:-150px;
+}
+.header-nav a:hover:not(#get-started)::before
+{
+left:3%;
+right:3%;
+transition: 0.5s all ease; 
+}
+
+.header-nav #get-started
+{
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: 1px solid #fff;
+}
+.header-nav a:not(#get-started)
+{
+  font-weight:600;
+}
+.header-nav #get-started:hover
+{
+  background:#FF0513;
+  border: 1px solid #FF0513;
+  transition:0.5s all ease;
+}
+.header-nav ul
+{
+  display: flex;
+}
+.header-nav li
+{
+  list-style: none;
+}
+/* HEADER END */
+
+/* HERO START */
+.hero
+{
+  min-height: 100vh;
+  position:relative;
+  z-index:999;
+}
+.hero #object1
+{
+  position: absolute;
+  top: -16%;
+  left: 30%;
+}
+.hero #object2
+{
+  position: absolute;
+    left: -10%;
+    top: 17%;
+    z-index:-1;
+}
+.hero #object3
+{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+.hero-wrapper
+{
+  display:flex;
+}
+.hero-img-wrap
+{
+  max-width: 50%;
+}
+.hero-img-wrap img
+{
+  max-width: 800px;
+}
+.hero-content
+{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.hero-content h1
+{
+  line-height: 0.9;
+}
+.hero-content h4
+{
+  margin-top: 18px;
+}
+.hero-content h4 span
+{
+  color:#FF0513
+}
+.hero-content h3
+{
+  margin-top:40px;
+}
+.hero-content .social-icons
+{
+max-width:350px;
+margin-top: 22px;
+}
+.action-buttons
+{
+  margin-top: 69px;
+  display: flex;
+  max-width: 570px;
+  justify-content: space-between;
+}
+
+.hero ul
+{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  list-style: none;
+  bottom: 45%;
+  width: 60px;
+  margin: 0 25px;
+}
+.hero ul li
+{
+  font-size:20px;
+  border-bottom: 2px solid #707070;
+  margin-bottom: 15.5px;
+  color:#8D8D8D;
+}
+.hero ul li:hover, .hero ul li.selected
+{
+  color:#fff;
+  cursor: pointer;
+}
+/* HERO END */
+
+
+
+/* ABOUT US START*/
+.about-section
+{
+  background:#040221;
+  padding-top: 200px;
+  padding-bottom: 70px;
+}
+.about-wrapper
+{ 
+  display: flex;
+}
+.about-wrapper .about-content
+{
+  margin-right:45px;
+}
+.about-content, .img-wrapper
+{
+  width: 50%;
+}
+.about-section .img-wrapper
+{
+  background-color:#0E0C38;
+  padding: 74px 66px;
+  position: relative;
+}
+.about-section .img-wrapper::before
+{
+  content: ' ';
+  position: absolute;
+  left: -345px;
+  background: #FF0513;
+  height: 1px;
+  width: 345px;
+  top: 151.5px;
+}
+.about-content h2
+{
+  font-size:60px;
+  font-family: Poppins SemiBold;
+  margin-top: 110px;
+}
+.about-content p
+{
+  font-size:24px;
+  line-height: 55px;
+  margin-top: 75px;
+}
+.about-section .btn-primary
+{
+  margin-top:120px;
+}
+/* ABOUT US END */
+
+/* PORTFOLIO START */
+.container{
+  max-width: 1749px;
+  margin: 0 auto;
+}
+.portfolio{
+  background-color: #040221;
+  color: white;
+  padding-bottom: 188px;
+}
+.portfolioHeading{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.portfolioWrap h4{
+  font-size: 50px;
+}
+.lineSpan{
+  height: 2px;
+  width: 345px;
+  background-color: red;
+  position: absolute;
+  top: 36%;
+  left: 14%;
+}
+.portfolioHeading img{
+  border: 1px solid white;
+  padding: 43px;
+  border-radius: 50%;
+  margin-left: 33px;
+}
+.portfolioHeading img:hover{
+  background-color: red;
+  transition: all 0.7s;
+}
+.tabs{
+  text-align: left;
+}
+.tabContentImage{
+  margin-top: 131px;
+}
+.tabs button{
+  background-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  margin-right: 35px;
+}
+.tabs button:hover{
+  color: red;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+.tabContent{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tabContentLogo{
+  display:flex; 
+  /* height: 510px; */
+}
+.tabContentWeb{
+  display:flex; 
+  /* height: 510px; */
+}
+.tabContentMob{
+  display:flex; 
+  /* height: 510px; */
+}
+.tabContentImage{
+  width: 33%;
+}
+/* .tabContentImage{
+  vertical-align: baseline;
+} */
+.tabContentImage:hover{
+  transform: scaleY(1.1);
+  transform-origin: bottom;
+  transition: all 0.7s;
+}
+.tabContentImage img{
+  width: 505px;
+  /* height: 510px; */
+}
+
+.tabContentImage{
+  position: relative;
+}
+.tabContentImage::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 505px;
+  height: 510px;
+  transition: all 0.5s;
+  opacity: 0;
+  background-color: red;
+  margin: 0 auto;
+  border-radius: 8%;
+}
+.tabContentImage:hover::after{
+  opacity: 0.5;
+}
+.tabContentImage:hover::after{
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: all 0.7s;
+}
+.tabContentImage
+{
+  text-align:center;
+}
+/* PORTFOLIO END */
+
+
+/* Capabilities START */
+.capabilities-section
+{
+  padding:100px 0;
+}
+.capabilities-section h2,  .section-title h2
+{
+  font-size:60px;
+  font-family: 'Poppins';
+  font-weight: 600;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.capabilities-section .section-para, .client-says .section-para
+{
+  text-align:center;
+  font-size: 30px;
+  line-height: 60px;
 }
+.capabilities-section hr, .client-says hr
+{
+  
+  background: red;
+  height: 1px;
+  border: 0;
+  width: 345px;
+  margin: 40px 0;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.capabilities-section .section-title, .client-says .section-title
+{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.capabilities-section .capabilities-card
+{
+  text-align: -webkit-center;
+  min-width: 33%;
+  padding: 87px 0;
+}
+.capabilities-section .cards-wrap
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 142px;
+}
+.capabilities-section .card-inner
+{
+  max-width: 327px;
+}
+
+/* CAPABILITIES END */
+
+
+/* CLIENT SAYS START */
+
+.client-says
+{
+  background:#040221;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.client-says .map-wrap
+{
+  margin-top:230px;
+  display: flex;
+  padding-right: 52.5px;
+
+}
+.client-says .map-content 
+{
+  width:50%;
+  padding-left:52.5px;
+  line-height:55px;
+}
+.map-content cite
+{
+  font-size: 30px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: normal;
+
+}
+.client-says .map-content .para
+{
+  font-size: 30px;
+  margin-bottom: 80px;
+  position:relative;
+}
+.map-content .para::before
+{
+    content: '"';
+    top: 1%;
+    font-size: 300px;
+    left: -10%;
+    position: absolute;
+    color: red;
+    font-style: italic;
+}
+.map-content .para::after
+{
+  content: '"';
+    bottom: -47%;
+    font-size: 300px;
+    right: 65%;
+    position: absolute;
+    color: red;
+    font-style: italic;
+}
+.client-says .map-img
+{
+  position:relative;
+}
+.client-says #avatar1
+{
+  position: absolute;
+  left: 8%;
+}
+.map-img .avatar
+{
+  border: 10px solid transparent;
+  border-radius: 50%;
+  transition: 0.5s all ease;
+}
+.map-img .avatar:hover
+{
+  border: 10px solid red;
+  border-radius: 50%;
+  transition: 0.5s all ease;
+}
+.client-says #avatar2
+{
+  left: 39%;
+  bottom: 66%;
+  position: relative;
+  width: 12%;
+}
+.client-says #avatar3
+{
+    position: absolute;
+    left: 62%;
+    bottom: 88%;
+}
+.client-says #avatar11
+{
+  right: 19%;
+  bottom: 18%;
+  position: absolute;
+}
+.client-says #avatar21
+{
+  position: absolute;
+  bottom: 3px;
+  right: 47%;
+}
+.client-says #avatar31
+{
+    position: absolute;
+    left: 20%;
+    bottom: 42%;
+    width: 10%;
+}
+
+/* CLIENT SAYS END */
+
+
+/* CONTACTUS START */
+
+.contact-section
+{
+  padding-top: 234px;
+  padding-bottom: 138px;
+  position: relative;
+  text-align: center;
+}
+
+.contact-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width:1px;
+  left: 50%;
+  background: red;
+  height: 187px;
+}
+
+
+.contact-wrapper
+{
+  color: white;
+}
+.contact-wrapper h3{
+  font-size: 60px;
+  width: 40%;
+  margin: 47px auto 33px;
+  font-weight: 600;
+  font-family: 'Poppins';
+}
+
+.contact-wrapper form{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-wrapper p{
+  font-size: 20px;
+  width: 53%;
+  margin: 0px auto 89px;
+  font-weight: 500;
+  line-height: 2.5;
+  text-align:center;
+}
+
+.contact-wrapper input{
+  width: 594px;
+  height: 89px;
+  margin: 0px 50px 50px 0px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #707070;
+}
+
+.contact-wrapper textarea{
+  width: 1238px;
+  height: 205px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #707070;
+  margin: 0px 50px 89px 0px;
+
+}
+.contact-wrapper button{
+  padding: 30px 85px;
+  margin-right: 26px;
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 2px solid white;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-wrapper button:hover{
+  background-color: red;
+  border-color: red;
+  transition: all 0.7s;
+}
+.contact-wrapper .contact-form
+{
+  display: flex;
+  justify-content: center;
+}
+/* CONTACTUS END */
+
+
+
+input::placeholder
+{
+  padding-left: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea::placeholder
+{
+  padding-left: 25px;
+  padding-top: 27px;
 }
+/* Contact END */
+
+
+/* FOOTER START */
+
+footer
+{
+  text-align: center;
+  background-color: #040221;
+  color: white;
+  padding-bottom: 60px;
+}
+
+.footer-wrap{
+  position: relative;
+}
+
+.footer-wrap::after
+{
+    content: '';
+    top: 0;
+    left: 50%;
+    height: 83px;
+    width: 1px;
+    background: red;
+    position: absolute;
+}
+
+.footer-wrap img{
+  margin: 105px 0px 46px;
+}
+.socialMedia {
+  margin: 69px 0px 90px;
+}
+.socialMedia img{
+  margin-right: 33px;
+}
+footer hr{
+  border: none;
+  height: 1px;
+  margin-bottom: 53px;
+}
+.footer-links
+{
+  cursor:pointer;
+}
+.footerPara{
+  line-height: 2.5;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+footer hr
+{
+ background-color: #70707078;
+}
+/* FOOTER END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-BlackItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Black.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraLight.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-BoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraBold.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-LightItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Light.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Medium.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ExtraLightItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Italic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-MediumItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-SemiBold.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-SemiBoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Thin.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-ThinItalic.woff2') format('woff2'),
+      url('./assets/fonts/Poppins-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Bold.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Black.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-BlackItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-BoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ExtraLight.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ExtraLightItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ExtraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Italic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Light.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-LightItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Medium.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-MediumItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Regular.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Thin.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-SemiBold.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway-Thin.woff2') format('woff2'),
+      url('./assets/fonts/Raleway-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* END FONTS */
